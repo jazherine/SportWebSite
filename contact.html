@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Spor Blog</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Ansayfa</a></li>
+                    <li><a href="yazilar.html">Yazılar</a></li>
+                    <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                    <li><a href="contact.html">İletişim</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>İletişim</h1>
+        <form id="contactForm" action="#" method="POST">
+            <label for="name">Adınız</label>
+            <input type="text" id="name" name="name" placeholder="Adınızı girin" required>
+
+            <label for="email">E-posta</label>
+            <input type="email" id="email" name="email" placeholder="E-posta adresinizi girin" required>
+
+            <label for="message">Mesajınız</label>
+            <textarea id="message" name="message" placeholder="Mesajınızı yazın..." required></textarea>
+
+            <button type="submit">Gönder</button>
+        </form>
+        <p id="feedback" class="hidden">Mesajınız başarıyla gönderildi!</p>
+        <div class="footer">
+            <p>© 2024 Tüm Hakları Saklıdır.</p>
+        </div>
+    </div>
+
+    <div id="loadingBar" class="hidden">
+        <div id="progress"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
