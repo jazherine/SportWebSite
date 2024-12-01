@@ -30,3 +30,7 @@ form.addEventListener('submit', function (e) {
         progress.style.width = '0'; // Progress'i sıfırla
     }, 7000); // 7 saniye sonra form sıfırlansın
 });
+
+function readMore(url) {
+    window.location.href = url;
+}
