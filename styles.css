@@ -1,128 +1,219 @@
 /* Genel Ayarlar */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
-    line-height: 1.6;
+    box-sizing: border-box;
+    background-color: #fafafa;
+    /* Arka plan rengini daha açık yapalım */
+    color: #333;
+}
+
+/* Altbilgi */
+footer {
+    background: #222;
+    color: #fff;
+    padding: 2rem 0;
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #4caf50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
 
 /* Başlık Alanı */
 header {
     background: #333;
     color: #fff;
-    padding: 1rem 0;
+    padding: 2rem 0;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
-    text-align: center;
+    font-size: 3rem;
+    letter-spacing: 2px;
 }
 
 header nav ul {
-    list-style: none;
     display: flex;
     justify-content: center;
+    list-style: none;
     padding: 0;
+    margin: 1rem 0 0 0;
 }
 
 header nav ul li {
-    margin: 0 1rem;
+    margin: 0 1.5rem;
 }
 
 header nav ul li a {
     color: #fff;
     text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #4caf50;
+    /* Yeşil renk hover */
 }
 
 /* Kahraman Bölgesi */
 .hero {
+    background: #e9ecef;
+    padding: 4rem 0;
     text-align: center;
-    background: #f4f4f4;
-    padding: 2rem 0;
-}
-
-/* Ana Konteyner */
-.container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
+    background-image: url('your-image-url.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
 }
 
 /* İletişim Formu Alanı */
+.article-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0 3rem;
+    margin-top: 3rem;
+}
+
 .article {
-    background: #f9f9f9;
-    margin: 1rem 0;
-    padding: 1rem;
+    background: #fff;
     border: 1px solid #ddd;
+    margin: 1rem auto;
+    padding: 2rem;
+    display: block;
+    width: 100%;
+    max-width: 650px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
 
 .article h3 {
     color: #333;
+    font-size: 2rem;
+    margin-bottom: 1rem;
 }
 
 label {
     display: block;
-    margin: 1rem 0 0.5rem 0;
     font-weight: bold;
+    margin: 1rem 0 0.5rem 0;
 }
 
-input, textarea {
-    width: 100%;
-    padding: 0.5rem;
+input,
+textarea {
     border: 1px solid #ddd;
-    border-radius: 5px;
-    margin-bottom: 1rem;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    padding: 0.8rem;
+    width: 100%;
+    font-size: 1rem;
+    transition: border 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #4caf50;
+    outline: none;
 }
 
 textarea {
+    height: 180px;
     resize: vertical;
-    height: 150px;
 }
 
+/* Button */
 button {
-    background: #333;
-    color: #fff;
+    background: #4caf50;
     border: none;
-    padding: 0.5rem 1rem;
+    color: #fff;
     cursor: pointer;
-    transition: background 0.3s ease-in-out;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background 0.3s ease, transform 0.2s ease;
+    border-radius: 5px;
 }
 
 button:hover {
-    background: #555;
+    background: #45a049;
+    transform: translateY(-2px);
 }
 
-/* Altbilgi */
-footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1rem 0;
-    margin-top: 2rem;
+button:active {
+    transform: translateY(0);
 }
+
+/* Ana Konteyner */
+.container {
+    margin: auto;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.container h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin: 2rem 0;
+    color: #333;
+}
+
+.container p {
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* Diğer */
 .hidden {
     display: none;
 }
 
 #feedback {
-    margin-top: 1rem;
     color: green;
     font-weight: bold;
+    margin-top: 1rem;
     text-align: center;
 }
 
 #loadingBar {
-    width: 100%;
     background-color: #f3f3f3;
     border-radius: 25px;
     height: 5px;
     margin-top: 10px;
+    width: 100%;
 }
 
 #progress {
-    height: 100%;
-    width: 0%;
     background-color: #4caf50;
     border-radius: 25px;
-    transition: width 0.1s ease-in-out;
+    height: 100%;
+    transition: width 0.3s ease;
+    width: 0%;
 }
-
